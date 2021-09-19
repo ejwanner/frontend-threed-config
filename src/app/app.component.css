@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+span {
+  padding: 1rem
+}
+
+label {
+  padding-left: 1rem;
+}
+
+.update-button {
+  color: teal;
+}

@@ -1,0 +1,27 @@
+<h1> 3D Configurator</h1>
+
+<div class="geo-item" *ngFor="let item of geometries">
+    <span> <strong>ID:</strong> {{ item._id }} </span>
+    <span> <strong>name:</strong> {{ item.name }} </span>
+    <span> <strong>height:</strong> {{ item.height }} </span>
+    <span> <strong>width:</strong> {{ item.width }} </span>
+    <span> <strong>depth:</strong> {{ item.depth }} </span>
+    <span> <strong>color:</strong> {{ item.color }} </span>
+    <button mat-button color="primary" (click)='select(item._id)' >SELECT</button>
+    <button mat-button color='warn' (click)='delete(item._id)' >DELETE</button><br/><br/>
+    <form [formGroup]="boxForm" (ngSubmit)="update()" >
+      <div>
+        <label for="_id">
+          ID:
+        </label>
+        <input id="_id" type="text" formControlName="_id">
+        <label for="color">
+          New Color:
+        </label>
+        <input id="color" type="text" formControlName="color">
+      </div>
+      <button mat-button class="update-button" type="submit">Update</button>
+    </form>
+</div>
+
+
